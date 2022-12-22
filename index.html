@@ -1,5 +1,9 @@
 <h1>卒業制作　サッカーにおける時間帯別の得点と、勝率との関係の分析
  
+     <html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
       google.charts.load('current', {'packages':['line']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -34,10 +38,22 @@
           subtitle: 'in millions of dollars (USD)'
         },
         width: 900,
-        height: 500
+        height: 500,
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
       };
 
-      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
 
       chart.draw(data, google.charts.Line.convertOptions(options));
-    }  
+    }
+  </script>
+</head>
+<body>
+  <div id="line_top_x"></div>
+</body>
+</html>
+
