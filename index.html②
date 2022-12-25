@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>田岡和也の卒業制作①</title>
+    <title>田岡和也の卒業制作②</title>
   <head>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   
@@ -36,7 +36,7 @@
 
       var options = {
         chart: {
-          title: 'マンチェスターシティ',
+          title: 'リヴァプール',
           subtitle: '得失点 (点)　(今期の数字は13節終了時点のものを基に予想)'
         },
         width: 900,
