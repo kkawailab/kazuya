@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>田岡和也の卒業制作①</title>
+  <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['line']});
+    google.charts.setOnLoadCallback(drawChart);
 
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', '時間帯(分)');
+      data.addColumn('number', '18/19(得失点72点)勝率84%');
+      data.addColumn('number', '19/20(得失点67点)勝率68%');
+      data.addColumn('number', '今期(得失点81点)勝率77%');
+
+      data.addRows([
+        [10,  12, 5, 6],
+        [20,  11, 4, 15],
+        [30,  5,   6, 0],
+        [40,  6, 5, 18],
+        [50,  10, 14, 18],
+        [60,   9, 10,  0],
+        [70,   8, 11,  27],
+        [80,  4, 3, 3],
+        [90,  7, 9, 3],
+       
+      ]);
+
+      var options = {
+        chart: {
+          title: 'マンチェスターシティ',
+          subtitle: '得失点 (点)　(今期の数字は13節終了時点のものを基に予想)'
+        },
+        width: 900,
+        height: 500,
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+  </head>
+  
+  <body>
+    <h1>卒業制作　サッカーにおける時間帯別の得点と、勝率との関係の分析</h1>
+    <div id="line_top_x"></div>
+
+  </body>
+</html>
