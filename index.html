@@ -15,19 +15,19 @@
     function drawSeriesChart() {
 
       var data = google.visualization.arrayToDataTable([
-        ['ID', '勝率', '得失点', 'Region',     'Population'],
-        ['MC',    80.66,              1.67,      'North America',  33739900],
-        ['LIV',    79.84,              1.36,      'Europe',         81902307],
-        ['CHE',    78.6,               1.84,      'Europe',         5523095],
-        ['TOT',    72.73,              2.78,      'Middle East',    79716203],
-        ['ARS',    80.05,              2,         'Europe',         61801570],
-        ['MU',    72.49,              1.7,       'Middle East',    73137148],
+        ['ID', '勝率', '得失点', 'Region',],
+        ['MC',    80.66,              1.67,      'Manchester'],
+        ['LIV',    79.84,              1.36,      'Liverpool'],
+        ['CHE',    78.6,               1.84,      'London'],
+        ['TOT',    72.73,              2.78,      'London'],
+        ['ARS',    80.05,              2,         'London'],
+        ['MU',    72.49,              1.7,       'Manchester'],
        
       ]);
 
       var options = {
-        title: 'Fertility rate vs life expectancy in selected countries (2010).' +
-          ' X=勝率, Y=得失点, Bubble size=Population, Bubble color=Region',
+        title: 'イングランドプレミアリーグのBIG6の勝率と得失点の予想(22/23シーズン)' +
+          ' X=勝率, Y=得失点, Bubble size=勝率, Bubble color=Region',
         hAxis: {title: '勝率'},
         vAxis: {title: '得失点'},
         bubble: {textStyle: {fontSize: 11}}
