@@ -15,20 +15,20 @@
     function drawSeriesChart() {
 
       var data = google.visualization.arrayToDataTable([
-        ['ID', '勝率(%)', '得失点(点)', 'Region',],
-        ['①MC',     83.8,              80,      'Manchester'],
-        ['⑥LIV',    40,              37,      'Liverpool'],
-        ['⑤CHE',    43.6,               11,      'London'],
-        ['③TOT',    59.6,              19,      'London'],
-        ['②ARS',    83.2,              37,         'London'],
-        ['④MU',    52.3,              13,       'Manchester'],
+        ['ID', '勝ち点(点)', '得失点(点)', 'Region',],
+        ['①MC',     93,              80,      'Manchester'],
+        ['⑥LIV',    60,              37,      'Liverpool'],
+        ['⑤CHE',    38,               11,      'London'],
+        ['③TOT',    68,              19,      'London'],
+        ['②ARS',    76,              37,         'London'],
+        ['④MU',    74,              13,       'Manchester'],
        
       ]);
 
       var options = {
         title: 'イングランドプレミアリーグのBIG6の勝率と得失点の予想(22/23シーズン)' +
-          ' X=勝率, Y=得失点, Bubble size=勝率, Bubble color=Region',
-        hAxis: {title: '勝率'},
+          ' X=勝ち点, Y=得失点, Bubble color=Region',
+        hAxis: {title: '勝ち点'},
         vAxis: {title: '得失点'},
         bubble: {textStyle: {fontSize: 11}}
       };
@@ -39,7 +39,7 @@
     </script>
   </head>
   <body>
-    <h1>卒業制作　サッカーにおける時間帯別の得失点と、勝率との関係の分析</h1>
+    <h1>卒業制作　サッカーにおける時間帯別の得失点と、勝ち点との関係の分析</h1>
     <div id="line_top_x"></div>
     <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
     
